@@ -8,4 +8,6 @@ throw ''
     sudo nixos-generate-config --dir $PWD --root /mnt
 
   You can then configure your system to your liking.
+
+  See the README.md document for more information.
 ''
