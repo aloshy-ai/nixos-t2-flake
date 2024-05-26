@@ -16,7 +16,8 @@
   outputs = { nixpkgs, nixos-hardware, ... }: {
     # remove everything below this
     templates.default = {
-      path = ./.;
+      path = builtins.filterSource (path: _:
+        (!builtins.elem (builtins.baseNameOf path) [ "README.md" "configuration.nix" "LICENSE" ])) ./.;
       description =
         "A flake to quickly get started to use NixOS on a T2 Mac device.";
     };
