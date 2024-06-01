@@ -1,5 +1,5 @@
 { ... }:
-let substituters = [ "https://hydra.soopy.moe" ];
+let substituters = [ "https://cache.soopy.moe" ];
 in {
   nix.settings = {
     experimental-features = [ "nix-command" "flakes" "repl-flake" ];
