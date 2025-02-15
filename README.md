@@ -10,7 +10,7 @@ See the [Installation Guide](https://wiki.t2linux.org/distributions/nixos/instal
 $ mkdir /mnt/flake # makes a directory to store the flake as nix flake init does not make a subdir.
 $ cd /mnt/flake
 $ nix flake init -t github:soopyc/nixos-t2-flake # creates a flake based on this template.
-$ nix run github:snowfallorg/nix-editor -- flake.nix "outputs.templates.default" --deref --inplace; sed -i '' '/#.*remove/d' flake.nix # removes templating configuration.
+$ nix run github:snowfallorg/nix-editor -- flake.nix outputs.templates.default -id; sed -i '' '/#.*remove/d' flake.nix # removes templating configuration.
 $ rm configuration.nix # delete the stub configuration file.
 $ nixos-generate-config --dir $PWD --root /mnt # generate configuration files.
 # Carry on installing.
